@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Apartment Price Estimation</title>
+  </head>
+  <body>
+    <h1 id="header">Estimate Apartment Prices</h1>
+    <div class="center">
+      <form action="javascript:void(0)" method="post">
+        <div class="field">
+          <label for="sqft">Square ft. </label>
+          <input type="number" name="sqft" id="sqft" required />
+        </div>
+        <div class="field">
+          <label for="bhk">BHK</label>
+          <input type="number" name="bhk" id="bhk" required />
+        </div>
+        <div class="field">
+          <label for="bath">Bath</label>
+          <input type="number" name="bath" id="bath" required />
+        </div>
+        <div class="field">
+          <label for="balcony">Balcony</label>
+          <input type="number" name="balcony" id="balcony" required />
+        </div>
+        <div class="field">
+          <label for="location">Select location</label>
+          <select name="location" id="location" required>
+            <option value="1st block jayanagar">1st block jayanagar</option>
+          </select>
+        </div>
+        <div class="field">
+          <button type="submit" onclick="getEstimatedPrice()">Estimate</button>
+          <button onclick="Reset()">Reset</button>
+        </div>
+      </form>
+      <div id="output">
+        <p id="price"></p>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
